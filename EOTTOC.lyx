@@ -992,5 +992,43 @@ equivalent
 Finite Automata and Regular Expressions
 \end_layout
 
+\begin_layout Standard
+The class of languages accepted by DFA or NFA, is the same as the class
+ of 
+\emph on
+regular languages
+\emph default
+ -- those that can be described by regular expressions.
+\end_layout
+
+\begin_layout Standard
+The class of regular languages are the closure of certain finite languages
+ under the language operations of union, concatenation, and Kleene star.
+ We can prove similar closure properties of the class of languages accepted
+ by finite automata: union, concatenation, Kleene star, complementation
+ (exchange the final and nonfinal states), intersection (represented as
+ complementation and union).
+ Therefore, a language is regular 
+\emph on
+only if
+\emph default
+ it is accepted by a finite automaton.
+\end_layout
+
+\begin_layout Standard
+The other part, a language is regular
+\emph on
+ if
+\emph default
+ it is accepted by a finite automaton, can be proved by constructing a regular
+ expression from every NFA.
+ The way is to find all paths between initial state to some final state,
+ then union them.
+\end_layout
+
+\begin_layout Section
+Languages that are and are not Regular
+\end_layout
+
 \end_body
 \end_document
