@@ -1223,5 +1223,52 @@ Algorithm for state minimization: continuely refine the relation
 .
 \end_layout
 
+\begin_layout Section
+Algorithms for Finite Automata
+\end_layout
+
+\begin_layout Standard
+Expnential: NFA to DFA, NFA to regex, decides whether two regex or NFA are
+ equivalent.
+\end_layout
+
+\begin_layout Standard
+Polynomial: regex to NFA, DFA to minimal DFA, decides whether two DFA are
+ equivalent.
+\end_layout
+
+\begin_layout Standard
+Two DFA are equivalent if and only if 
+\emph on
+their standard automata are identical
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $L$
+\end_inset
+
+ is a regular language, then there is an algorithm which, given 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+, tests whether it is in 
+\begin_inset Formula $L$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{O}(|w|)$
+\end_inset
+
+ time using DFA.
+ If using NFA, the time complexity should be 
+\begin_inset Formula $\mathcal{O}(|K|^{2}|w|)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
