@@ -1,0 +1,730 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Reading Notes of
+\begin_inset Newline newline
+\end_inset
+
+Elements of the Theory of Computation
+\end_layout
+
+\begin_layout Author
+Tianyi Cui
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Introduction
+\end_layout
+
+\begin_layout Standard
+Fundamental questions in computer science answered by theory of computation:
+\end_layout
+
+\begin_layout Itemize
+What is an algorithm? 
+\end_layout
+
+\begin_layout Itemize
+What can and what cannot be computed?
+\end_layout
+
+\begin_layout Itemize
+When should an algorithm be considered practically feasible.
+\end_layout
+
+\begin_layout Standard
+The theory of computation is the mathematical abstractions of computers,
+ but its origin is even before the advent of the electronic computer.
+\end_layout
+
+\begin_layout Quote
+It is based on very few and elementary concepts, and draws its power and
+ depth from the careful, patient, extensive, layer-by-Iayer manipulation
+ of these concepts -- just like the computer.
+ 
+\end_layout
+
+\begin_layout Chapter
+Sets, Relations, and Languages
+\end_layout
+
+\begin_layout Section
+Sets
+\end_layout
+
+\begin_layout Standard
+Power set: 
+\begin_inset Formula $2^{A}$
+\end_inset
+
+, the collection of all subsets of set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Partition of set 
+\begin_inset Formula $A$
+\end_inset
+
+, subset of 
+\begin_inset Formula $2^{A}$
+\end_inset
+
+ whose elements are nonempty and disjoint when contain all elements of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Relations and functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are called the 
+\emph on
+components
+\emph default
+ of the ordered pair 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+Cartesian product
+\emph default
+ of two sets.
+\end_layout
+
+\begin_layout Standard
+Ordered tuples: ordered triples, quadruples, quintuples, sextuples...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n$
+\end_inset
+
+-ary relation: unary, binary, ternary...
+\end_layout
+
+\begin_layout Standard
+The domain, image, 
+\emph on
+range
+\emph default
+, of function; one-to-one + onto = bijection; inverse.
+\end_layout
+
+\begin_layout Section
+Special types of binary relations
+\end_layout
+
+\begin_layout Standard
+The relation 
+\begin_inset Formula $R\in A\times A$
+\end_inset
+
+ is called a 
+\emph on
+directed graph
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Properties of relations: reflexive, symmetric, antisymmetric, transitive.
+\end_layout
+
+\begin_layout Standard
+Equivalence relation: r, s, t.
+ Partial order: r, a, t.
+ Total order.
+\end_layout
+
+\begin_layout Section
+Finite and infinite sets
+\end_layout
+
+\begin_layout Standard
+Call two sets 
+\emph on
+equinumerous
+\emph default
+ if there is a bijection between them.
+\end_layout
+
+\begin_layout Standard
+Finite (equinumerous with 
+\begin_inset Formula $\{{1,2,\ldots n}\}$
+\end_inset
+
+, infinite, countably infinite (equinumerous with 
+\begin_inset Formula $\mathbf{{N}}$
+\end_inset
+
+), countable, uncountable.
+ 
+\end_layout
+
+\begin_layout Section
+Three fundamental proof techniques
+\end_layout
+
+\begin_layout Standard
+The Principle of Mathematical Induction: Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set of natural numbers such that (1) 
+\begin_inset Formula $0\in A$
+\end_inset
+
+, and (2) for each natural number 
+\begin_inset Formula $n$
+\end_inset
+
+`$n$`, if 
+\begin_inset Formula $\{0,1,\ldots,n\}\subseteq A$
+\end_inset
+
+, then 
+\begin_inset Formula $n+1\in A$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $A=\mathbf{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Pigeonhole Principle: if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are finite sets and 
+\begin_inset Formula $|A|>|B|$
+\end_inset
+
+, then there is no one-to-one function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Diagonalization Principle: Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $A$
+\end_inset
+
+, and let 
+\begin_inset Formula $D$
+\end_inset
+
+, the diagonal set for 
+\begin_inset Formula $R$
+\end_inset
+
+, be 
+\begin_inset Formula $\{a:a\in A\text{ and }(a,a)\notin R\}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, let 
+\begin_inset Formula $R_{a}=\{b:b\in A\text{ and }(a,b)\in R\}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $D$
+\end_inset
+
+ is distinct from each 
+\begin_inset Formula $R_{a}$
+\end_inset
+
+.
+ Lemma: the set 
+\begin_inset Formula $2^{\mathbf{N}}$
+\end_inset
+
+ is uncountable.
+ 
+\end_layout
+
+\begin_layout Section
+Closures and algorithms
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+reflecxie transitive closure
+\emph default
+ of a directed graph.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+rate of growth
+\emph default
+ of a function 
+\begin_inset Formula $f$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbf{{N}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The proof of correctness of the Floyd algorithm: define 
+\emph on
+rank of a path
+\emph default
+ as the biggest index among its intermediate nodes, and prove that after
+ the 
+\begin_inset Formula $j$
+\end_inset
+
+th iteration, all path with rank less than or equal to 
+\begin_inset Formula $j$
+\end_inset
+
+ will be found.
+\end_layout
+
+\begin_layout Standard
+Closure property: Let 
+\begin_inset Formula $D$
+\end_inset
+
+ be a set, let 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, and let 
+\begin_inset Formula $R\subseteq D^{n+1}$
+\end_inset
+
+ be a 
+\begin_inset Formula $(n+1)$
+\end_inset
+
+-ary relation on 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Then a subset 
+\begin_inset Formula $B$
+\end_inset
+
+ of 
+\begin_inset Formula $D$
+\end_inset
+
+ is said to be 
+\emph on
+closed under
+\emph default
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ if 
+\begin_inset Formula $b_{n+1}\in B$
+\end_inset
+
+ whenever 
+\begin_inset Formula $b_{1},\ldots,b_{n}\in B$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{1},\ldots,b_{n},b_{n+1}\}\in R$
+\end_inset
+
+.
+ Any property of the form "the set 
+\begin_inset Formula $B$
+\end_inset
+
+ is closed under relation 
+\begin_inset Formula $R_{1},R_{2},\ldots,R_{m}$
+\end_inset
+
+" is called a 
+\emph on
+closure property
+\emph default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The minimal set 
+\begin_inset Formula $B$
+\end_inset
+
+ that contains 
+\begin_inset Formula $A$
+\end_inset
+
+ and has property 
+\begin_inset Formula $P$
+\end_inset
+
+ is unique if 
+\begin_inset Formula $P$
+\end_inset
+
+ is a closure property defined by relations on a set 
+\begin_inset Formula $D$
+\end_inset
+
+ while 
+\begin_inset Formula $A\subseteq D$
+\end_inset
+
+.
+ Then we call 
+\begin_inset Formula $B$
+\end_inset
+
+ the 
+\emph on
+closure
+\emph default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ under the relation 
+\begin_inset Formula $R_{1},\ldots,R_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Inclusion property: unary closure (take 
+\begin_inset Formula $n=0$
+\end_inset
+
+ in definition).
+\end_layout
+
+\begin_layout Standard
+Any closure property over a finite set can be computed in polynomial time
+ (see ex1.6.9).
+ 
+\end_layout
+
+\begin_layout Section
+Alphabets and languages
+\end_layout
+
+\begin_layout Standard
+Here is the 
+\emph on
+mathematics of strings of symbols
+\emph default
+.
+\end_layout
+
+\begin_layout Description
+symbol: any object, but often only common characters are used.
+\end_layout
+
+\begin_layout Description
+alphabet: a finite set of symbols.
+\end_layout
+
+\begin_layout Description
+string: finite sequence of symbols from the alphabet, which has 
+\emph on
+length
+\emph default
+, operation of 
+\emph on
+concatenation
+\emph default
+(
+\begin_inset Formula $\circ$
+\end_inset
+
+), 
+\emph on
+substring
+\emph default
+, 
+\emph on
+prefix
+\emph default
+, 
+\emph on
+suffix
+\emph default
+, 
+\begin_inset Formula $s^{n}$
+\end_inset
+
+, operation of 
+\emph on
+reversal
+\emph default
+(
+\begin_inset Formula $s^{R}$
+\end_inset
+
+) defined
+\end_layout
+
+\begin_layout Description
+language: any set of strings over an alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, that is, any subset of 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+.
+ It might be able to be enumerated 
+\emph on
+lexicographically
+\emph default
+.
+ It has 
+\emph on
+complement
+\emph default
+ (
+\begin_inset Formula $\overline{L}$
+\end_inset
+
+), 
+\emph on
+concatenation of languages
+\emph default
+, 
+\emph on
+Kleene star
+\emph default
+ (the set of all strings obtained by concatenating zero or more strings
+ from it).
+ We write 
+\begin_inset Formula $L^{+}$
+\end_inset
+
+ for 
+\begin_inset Formula $LL^{*}$
+\end_inset
+
+, which is the 
+\emph on
+closure
+\emph default
+ of 
+\begin_inset Formula $L$
+\end_inset
+
+ under the function of concatenation.
+\end_layout
+
+\begin_layout Section
+Finite representations of languages
+\end_layout
+
+\begin_layout Standard
+This section discusses how to use 
+\emph on
+regular expressions
+\emph default
+ to represent languages.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+regular expression
+\emph default
+ is the representation of language using empty set, characters in alphabet,
+ concatentaion (symbol usually omitted), function of union (the 
+\emph on
+or
+\emph default
+ operator in regex), star, and parentheses.
+ We can define the function 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ from regular expressions to lanuages, whose range is called the class of
+ 
+\emph on
+regular languages
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+language recognition device
+\emph default
+ is an algorithm that is specifically designed to answer questions of the
+ form "is string 
+\begin_inset Formula $w$
+\end_inset
+
+ a member of 
+\begin_inset Formula $L$
+\end_inset
+
+?".
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+language generator
+\emph default
+ is the description of the way of generating members of a language.
+\end_layout
+
+\begin_layout Standard
+The relation between the above two types of finite language specifications
+ is another major subject of this book.
+\end_layout
+
+\begin_layout Chapter
+Finite Automata
+\end_layout
+
+\end_body
+\end_document
