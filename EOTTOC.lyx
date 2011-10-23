@@ -1030,5 +1030,51 @@ The other part, a language is regular
 Languages that are and are not Regular
 \end_layout
 
+\begin_layout Standard
+Showing languages are regular: use regular expressions or automata and operation
+s on languages.
+\end_layout
+
+\begin_layout Standard
+Theorem: Let 
+\begin_inset Formula $L$
+\end_inset
+
+ be a regular language.
+ There is an integer 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ such that any string 
+\begin_inset Formula $w\in L$
+\end_inset
+
+ with 
+\begin_inset Formula $|w|\geq n$
+\end_inset
+
+ can be rewritten as 
+\begin_inset Formula $w=xyz$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\not=e$
+\end_inset
+
+, 
+\begin_inset Formula $|xy|\leq n$
+\end_inset
+
+, and 
+\begin_inset Formula $xy^{i}z\in L$
+\end_inset
+
+ for each 
+\begin_inset Formula $i\geq0$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
