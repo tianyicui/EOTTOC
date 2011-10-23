@@ -726,5 +726,199 @@ The relation between the above two types of finite language specifications
 Finite Automata
 \end_layout
 
+\begin_layout Section
+Deterministic Finite Automata
+\end_layout
+
+\begin_layout Standard
+DFA is computer with no memory; input a string, output indicate whether
+ it's acceptable.
+ 
+\end_layout
+
+\begin_layout Standard
+DFA definition: quituple 
+\begin_inset Formula $M=(K,\Sigma,\delta,s,F)$
+\end_inset
+
+, where 
+\begin_inset Formula $K$
+\end_inset
+
+ is a finite set of 
+\emph on
+states
+\emph default
+, 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ is an alphabet, 
+\begin_inset Formula $s\in K$
+\end_inset
+
+ is the 
+\emph on
+initial state
+\emph default
+, 
+\begin_inset Formula $F\subseteq K$
+\end_inset
+
+ is the set of 
+\emph on
+final states
+\emph default
+, and 
+\begin_inset Formula $\delta$
+\end_inset
+
+ the 
+\emph on
+transition function
+\emph default
+, is a function from 
+\begin_inset Formula $K\times\Sigma$
+\end_inset
+
+ to 
+\begin_inset Formula $K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+configuration of a DFA
+\emph default
+ is any elements of 
+\begin_inset Formula $K\times\Sigma^{*}$
+\end_inset
+
+.
+ For two configuration 
+\begin_inset Formula $(q,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $(q',w')$
+\end_inset
+
+, then 
+\begin_inset Formula $(q,w)\vdash_{M}(q',w')$
+\end_inset
+
+ if and only
+\begin_inset Formula $\vdash_{M}^{*}$
+\end_inset
+
+ if 
+\begin_inset Formula $w=aw'$
+\end_inset
+
+ for some symbol 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta(q,a)=q'$
+\end_inset
+
+.
+ We say that 
+\begin_inset Formula $(q,w)$
+\end_inset
+
+ 
+\series bold
+yields
+\series default
+ 
+\begin_inset Formula $(q',w')$
+\end_inset
+
+ 
+\series bold
+in one step
+\series default
+.
+ Denote the reflexive transitive closure of 
+\begin_inset Formula $\vdash_{M}$
+\end_inset
+
+by 
+\begin_inset Formula $\vdash_{M}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $(q,w)$
+\end_inset
+
+ 
+\begin_inset Formula $\vdash_{M}^{*}$
+\end_inset
+
+ 
+\begin_inset Formula $(q',w')$
+\end_inset
+
+ is read, 
+\begin_inset Formula $(q,w)$
+\end_inset
+
+ 
+\series bold
+yields
+\series default
+ 
+\begin_inset Formula $(q',w')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A string 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ is said to be 
+\emph on
+accepted
+\emph default
+ by 
+\begin_inset Formula $M$
+\end_inset
+
+ if and only if there is a state 
+\begin_inset Formula $q\in F$
+\end_inset
+
+ such that 
+\begin_inset Formula $(s,w)\vdash_{M}^{*}(q,e)$
+\end_inset
+
+.
+ 
+\emph on
+The language accepted
+\emph default
+ by 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $L(M)$
+\end_inset
+
+ is the set of all strings accepted by 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
