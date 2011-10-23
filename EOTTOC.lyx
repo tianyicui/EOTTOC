@@ -920,5 +920,77 @@ The language accepted
 .
 \end_layout
 
+\begin_layout Section
+Nondeterministic Finite Automata
+\end_layout
+
+\begin_layout Standard
+NFAs are simply a useful 
+\emph on
+notational generalization
+\emph default
+ of finite automata, as they can greatly simplify the description of these
+ automata.
+ Moreover, every NFA is equivalent to a DFA.
+\end_layout
+
+\begin_layout Standard
+NFA definition: quituple 
+\begin_inset Formula $M=(K,\Sigma,\Delta,s,F)$
+\end_inset
+
+ where 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ the 
+\emph on
+transition relation
+\emph default
+, is a subset of 
+\begin_inset Formula $K\times(\Sigma\cup\{e\})\times K$
+\end_inset
+
+.
+ Each triple 
+\begin_inset Formula $(q,u,p)\in\Delta$
+\end_inset
+
+ is called a 
+\emph on
+transition
+\emph default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Two finite automata 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are 
+\emph on
+equivalent
+\emph default
+ if and only if 
+\begin_inset Formula $L(M_{1})=L(M_{2})$
+\end_inset
+
+.
+ For each NFA, there is an equivalent DFA.
+\end_layout
+
+\begin_layout Section
+Finite Automata and Regular Expressions
+\end_layout
+
 \end_body
 \end_document
