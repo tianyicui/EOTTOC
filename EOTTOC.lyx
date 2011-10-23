@@ -1076,5 +1076,152 @@ Theorem: Let
 .
 \end_layout
 
+\begin_layout Section
+State Minimization
+\end_layout
+
+\begin_layout Standard
+In language 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+, string 
+\begin_inset Formula $x,y\in\Sigma^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are 
+\emph on
+equivalent with respect to 
+\begin_inset Formula $L$
+\end_inset
+
+
+\emph default
+, denoted 
+\begin_inset Formula $x\approx_{L}y$
+\end_inset
+
+, if for all 
+\begin_inset Formula $z\in\Sigma^{*}$
+\end_inset
+
+, the following is true: 
+\begin_inset Formula $xz\in L$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $yz\in L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a DFA, the two strings 
+\begin_inset Formula $x,y\in\Sigma^{*}$
+\end_inset
+
+ are 
+\emph on
+equivalent with respect to 
+\begin_inset Formula $M$
+\end_inset
+
+
+\emph default
+, denoted 
+\begin_inset Formula $x\sim_{M}y$
+\end_inset
+
+, if they both drive 
+\begin_inset Formula $M$
+\end_inset
+
+ from 
+\begin_inset Formula $s$
+\end_inset
+
+ to the same state.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $x\sim_{M}y$
+\end_inset
+
+, then 
+\begin_inset Formula $x\approx_{L(M)}y$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\sim_{M}$
+\end_inset
+
+ is a 
+\series bold
+refinement
+\series default
+ of 
+\begin_inset Formula $\approx_{L(M)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ be a regular language.
+ Then there is a DFA with precisely as many states as there are equivalence
+ classes in 
+\begin_inset Formula $\approx_{L}$
+\end_inset
+
+ that accepts 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 
+\emph on
+-- Can be constructively proved.
+\end_layout
+
+\begin_layout Standard
+Corollary: A language L is regular if and only if 
+\begin_inset Formula $\approx_{L}$
+\end_inset
+
+ has finitely many equivalence classes.
+\end_layout
+
+\begin_layout Standard
+Algorithm for state minimization: continuely refine the relation 
+\begin_inset Formula $\equiv=\approx/\sim$
+\end_inset
+
+, initially 
+\begin_inset Formula $\equiv_{0}=\{F,K-F\}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
