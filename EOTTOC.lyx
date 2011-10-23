@@ -1270,5 +1270,248 @@ If
 .
 \end_layout
 
+\begin_layout Chapter
+Context-Free Languages
+\end_layout
+
+\begin_layout Section
+Context-Free Grammars
+\end_layout
+
+\begin_layout Standard
+The concepts of 
+\emph on
+laguage recognizer
+\emph default
+ and 
+\emph on
+language generator
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+context-free grammar
+\series default
+ 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+, where 
+\begin_inset Formula $V$
+\end_inset
+
+ is an alphabet, 
+\begin_inset Formula $\Sigma\subseteq V$
+\end_inset
+
+ is the set of 
+\emph on
+terminals
+\emph default
+, 
+\begin_inset Formula $R\subseteq(V-\Sigma)\times V^{*}$
+\end_inset
+
+ is the finite set of 
+\emph on
+rules
+\emph default
+, and 
+\begin_inset Formula $S\in V-\Sigma$
+\end_inset
+
+ is the 
+\emph on
+start symbol
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Member of 
+\begin_inset Formula $V-\Sigma$
+\end_inset
+
+ is called 
+\emph on
+nonterminals
+\emph default
+.
+ For any 
+\begin_inset Formula $A\in V-\Sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $u\in V^{*}$
+\end_inset
+
+, we write 
+\begin_inset Formula $A\rightarrow_{G}u$
+\end_inset
+
+ whenever 
+\begin_inset Formula $(A,u)\in R$
+\end_inset
+
+.
+ For any strings 
+\begin_inset Formula $u,v\in V^{*}$
+\end_inset
+
+, we write 
+\begin_inset Formula $u\Rightarrow_{G}v$
+\end_inset
+
+ if and only if there are strings 
+\begin_inset Formula $x,y\in V^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $A\in V-\Sigma$
+\end_inset
+
+ such that 
+\begin_inset Formula $u=xAy$
+\end_inset
+
+, 
+\begin_inset Formula $v=xv'y$
+\end_inset
+
+, and 
+\begin_inset Formula $A\rightarrow_{G}v'$
+\end_inset
+
+.
+ The relation 
+\begin_inset Formula $\Rightarrow_{G}^{*}$
+\end_inset
+
+ is the reflexive transitive closure of 
+\begin_inset Formula $\Rightarrow_{G}$
+\end_inset
+
+.
+ Finally, 
+\begin_inset Formula $L(G)$
+\end_inset
+
+ the 
+\emph on
+language generated
+\emph default
+ by 
+\begin_inset Formula $G$
+\end_inset
+
+, is 
+\begin_inset Formula $\{w\in\Sigma^{*}:S\Rightarrow_{G}^{*}w\}$
+\end_inset
+
+; we also say that 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\emph on
+generates
+\emph default
+ each string in 
+\begin_inset Formula $L(G)$
+\end_inset
+
+.
+ A language 
+\begin_inset Formula $L$
+\end_inset
+
+ is said to be a 
+\series bold
+context-free language
+\series default
+ if 
+\begin_inset Formula $L=L(G)$
+\end_inset
+
+ for some context-free grammar 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When the grammar to which we refer is obvious, we write 
+\begin_inset Formula $A\rightarrow w$
+\end_inset
+
+ and 
+\begin_inset Formula $u\Rightarrow v$
+\end_inset
+
+ instead of 
+\begin_inset Formula $A\rightarrow_{G}w$
+\end_inset
+
+ and 
+\begin_inset Formula $u\Rightarrow_{G}v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We call form 
+\begin_inset Formula $w_{0}\Rightarrow_{G}w_{1}\Rightarrow_{G}\cdots\Rightarrow_{G}w_{n}$
+\end_inset
+
+ a 
+\emph on
+derivation
+\emph default
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ of 
+\begin_inset Formula $w_{n}$
+\end_inset
+
+ from 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+, its 
+\emph on
+length
+\emph default
+ or 
+\emph on
+steps
+\emph default
+ is 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+All regular languages are context free.
+ We can directly construct the rules of a CFG using DFA's transition function:
+ 
+\begin_inset Formula $R=\{q\rightarrow ap:\delta(q,a)=p\}\cup\{q\rightarrow e:q\in F\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Parse Trees
+\end_layout
+
 \end_body
 \end_document
