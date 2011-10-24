@@ -1513,5 +1513,208 @@ All regular languages are context free.
 Parse Trees
 \end_layout
 
+\begin_layout Standard
+Show the derivation of a CFG in a tree, called 
+\emph on
+parse tree
+\emph default
+, which has 
+\emph on
+nodes
+\emph default
+, each node carries a 
+\emph on
+label
+\emph default
+, there are nodes called 
+\emph on
+root
+\emph default
+ and 
+\emph on
+leaves
+\emph default
+.
+ By concatenating the labels of the leaves from left to right, we obtain
+ the derived string of terminals, which is called the 
+\emph on
+yield
+\emph default
+ of the parse tree.
+\end_layout
+
+\begin_layout Standard
+Two derivations are identical except for two consecutive steps, during which
+ the same two nonterminals are replaced by the same two strings but in opposite
+ orders in the two derivations.
+ The derivation in which the leftmost of the two nonterminals is replaced
+ first is said to precede the other, written 
+\begin_inset Formula $D_{1}\prec D_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Two derivations 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula $D'$
+\end_inset
+
+ are 
+\emph on
+similar
+\emph default
+ if the pair 
+\begin_inset Formula $(D,D')$
+\end_inset
+
+ belongs in the reflexive, symmetric, transitive closure of 
+\begin_inset Formula $\prec$
+\end_inset
+
+.
+ We also have 
+\emph on
+leftmost derivation
+\emph default
+ and 
+\emph on
+rightmost derivation
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Leftmost derivation: we write 
+\begin_inset Formula $x\overset{L}{\Rightarrow}y$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x=wA\beta$
+\end_inset
+
+, 
+\begin_inset Formula $y=w\alpha\beta$
+\end_inset
+
+, i.e.
+ the leftmost nonterminal must be replaced.
+\end_layout
+
+\begin_layout Standard
+Usually, we can disambiguate an ambiguous CFG, unless the language is 
+\emph on
+inherently ambiguous
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Pushdown Automata
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+pushdown automaton
+\emph default
+ is a sextuple 
+\begin_inset Formula $M=(K,\Sigma,\Gamma,\Delta,s,F)$
+\end_inset
+
+, where 
+\begin_inset Formula $K$
+\end_inset
+
+ is a finite set of 
+\emph on
+states
+\emph default
+, 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ is an alphabet (the 
+\emph on
+input symbols
+\emph default
+), 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ is an alphabet (the 
+\emph on
+stack symbols
+\emph default
+), 
+\begin_inset Formula $s\in K$
+\end_inset
+
+ is the 
+\emph on
+initial state
+\emph default
+, 
+\begin_inset Formula $F\subseteq K$
+\end_inset
+
+ is the set of 
+\emph on
+final states
+\emph default
+, and 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, the 
+\emph on
+transition relation
+\emph default
+, is a finite subset of 
+\begin_inset Formula $(K\times(\Sigma\cup\{e\})\times\Gamma^{*})\times(K\times\Gamma^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $((p,a,\beta),(q,\gamma))\in\Delta$
+\end_inset
+
+, then when 
+\begin_inset Formula $M$
+\end_inset
+
+ is in state 
+\begin_inset Formula $p$
+\end_inset
+
+ with 
+\begin_inset Formula $\beta$
+\end_inset
+
+ at the top of the stack, may read 
+\begin_inset Formula $a$
+\end_inset
+
+ from input, replace 
+\begin_inset Formula $\beta$
+\end_inset
+
+ by 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ on the top of the stack, and enter state 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
