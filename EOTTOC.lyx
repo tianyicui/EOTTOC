@@ -1806,5 +1806,81 @@ not
  And then construct CFG.
 \end_layout
 
+\begin_layout Section
+Languages that are and are not Context-Free
+\end_layout
+
+\begin_layout Standard
+The context-free languages are 
+\emph on
+closed
+\emph default
+ under union, concatenation, and Kleene star.
+ But not closed under intersection or complementation.
+\end_layout
+
+\begin_layout Standard
+The intersection of a context-free language with a regular language is a
+ context-free language.
+ (The Cartesian product of state set of two automaton.)
+\end_layout
+
+\begin_layout Standard
+The fanout of 
+\begin_inset Formula $G$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\phi(G)$
+\end_inset
+
+, is the largest number of symbols on the right-hand side of any rule in
+ 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pumping theorem: Let 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ be a context-free grammar Then any string 
+\begin_inset Formula $w\in L(G)$
+\end_inset
+
+ of length greater than 
+\begin_inset Formula $\phi(G)^{|V-\Sigma|}$
+\end_inset
+
+ can be rewritten as 
+\begin_inset Formula $w=uvxyz$
+\end_inset
+
+ in such a way that eigher 
+\begin_inset Formula $v$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ is nonempty and 
+\begin_inset Formula $uv^{n}xy^{n}z$
+\end_inset
+
+ is in 
+\begin_inset Formula $L(G)$
+\end_inset
+
+ for every 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
