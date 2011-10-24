@@ -1882,5 +1882,40 @@ Pumping theorem: Let
 .
 \end_layout
 
+\begin_layout Section
+Algorithms for Context-Free Grammars
+\end_layout
+
+\begin_layout Standard
+Polynomial algorithms: from CFG to pushdown automaton; from pushdown automaton
+ to CFG; decide whether string 
+\begin_inset Formula $x\in L(G)$
+\end_inset
+
+, 
+\begin_inset Formula $G$
+\end_inset
+
+ is a CFG.
+\end_layout
+
+\begin_layout Standard
+A context-free grammar 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ is said to be in 
+\emph on
+Chomsky normal form
+\emph default
+ if 
+\begin_inset Formula $R\subseteq(V-\Sigma)\times V^{2}$
+\end_inset
+
+.
+ We can transform any CFG into Chomsky normal form in polynomial time.
+ After that, we can use dynamic programming to complete the acceptor algorithm.
+\end_layout
+
 \end_body
 \end_document
