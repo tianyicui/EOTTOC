@@ -1716,5 +1716,95 @@ transition relation
 .
 \end_layout
 
+\begin_layout Section
+Pushdown Automata and Context-Free Grammars
+\end_layout
+
+\begin_layout Standard
+Pushdown automaton is exactly what is needed to accept arbitrary context-free
+ languages.
+\end_layout
+
+\begin_layout Standard
+Construct a pushdown automaton from a context-free language.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M=(\{p,q\},\Sigma,V,\Delta,p,\{q\})$
+\end_inset
+
+, where 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ contains the following transitions: (1) 
+\begin_inset Formula $((p,e,e),(q,S))$
+\end_inset
+
+, (2) 
+\begin_inset Formula $((q,e,A),(q,x))$
+\end_inset
+
+ for each rule 
+\begin_inset Formula $A\rightarrow x$
+\end_inset
+
+ in 
+\begin_inset Formula $R$
+\end_inset
+
+, (3) 
+\begin_inset Formula $((q,a,a),(q,e))$
+\end_inset
+
+ for each 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Construct a context-free language from a pushdown automaton.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Simple
+\emph default
+ pushdown automaton: whenever 
+\begin_inset Formula $((q,a,\beta),(p,\gamma))$
+\end_inset
+
+ is a transition of the pushdown automaton and 
+\begin_inset Formula $q$
+\end_inset
+
+ is 
+\emph on
+not
+\emph default
+ the start state, then 
+\begin_inset Formula $\beta\in\Gamma$
+\end_inset
+
+, and 
+\begin_inset Formula $|\gamma|\leq2$
+\end_inset
+
+.
+ The machine always consults its topmost stack symbol and replaces it either
+ with 
+\begin_inset Formula $e$
+\end_inset
+
+, or with a single stack symbol, or with two stack symbols.
+ We can construct an equivalent simple pushdown automaton from any pushdown
+ automaton.
+ And then construct CFG.
+\end_layout
+
 \end_body
 \end_document
