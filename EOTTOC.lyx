@@ -124,7 +124,7 @@ The theory of computation is the mathematical abstractions of computers,
 
 \begin_layout Quote
 It is based on very few and elementary concepts, and draws its power and
- depth from the careful, patient, extensive, layer-by-Iayer manipulation
+ depth from the careful, patient, extensive, layer-by-layer manipulation
  of these concepts -- just like the computer.
  
 \end_layout
@@ -1915,6 +1915,143 @@ Chomsky normal form
 .
  We can transform any CFG into Chomsky normal form in polynomial time.
  After that, we can use dynamic programming to complete the acceptor algorithm.
+\end_layout
+
+\begin_layout Section
+Determinism and Parsing
+\end_layout
+
+\begin_layout Standard
+Deterministic pushdown automaton: for each configuration there is at most
+ one configuration taht can succeed it.
+ Detrministic CFG are thost that are accepted by deterministic pushdown
+ automata.
+\end_layout
+
+\begin_layout Standard
+Formally, we call a language 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ 
+\emph on
+deterministic context-free
+\emph default
+ if 
+\begin_inset Formula $L\$=L(M)$
+\end_inset
+
+ for some deterministic pushdown automaton 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Here 
+\begin_inset Formula $\$$
+\end_inset
+
+ is a new symbol appended to each input string to mark its end.
+\end_layout
+
+\begin_layout Standard
+The class of deterministic context-free language is 
+\emph on
+closed under complement
+\emph default
+.
+ The class of deterministic comtext-free language is 
+\emph on
+properly contained
+\emph default
+ in the class of context-free languages.
+\end_layout
+
+\begin_layout Standard
+Top-Down Parsing: the steps in the computation where a nonterminal is replaced
+ on top of the stack correpsond to the constrction of a parse tree from
+ the root towards the leaves.
+\end_layout
+
+\begin_layout Standard
+Left factoring: 
+\begin_inset Formula $F\rightarrow a\beta$
+\end_inset
+
+, 
+\begin_inset Formula $F\rightarrow a\gamma$
+\end_inset
+
+ to 
+\begin_inset Formula $F\rightarrow aE$
+\end_inset
+
+, 
+\begin_inset Formula $E\rightarrow\beta$
+\end_inset
+
+, 
+\begin_inset Formula $E\rightarrow\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Bottom-Up Parsing: carry out a leftmost derivation on the stack; attempt
+ to read the input first and, on the basis of the input actually read, deduce
+ what derivation it should attempt to carry out.
+\end_layout
+
+\begin_layout Standard
+Bottom-up pushdown automata construction: 
+\begin_inset Formula $G=(V,\Sigma,R,S)$
+\end_inset
+
+ is the grammar, 
+\begin_inset Formula $M=(K,\Gamma,\Delta,p,F)$
+\end_inset
+
+ is the automata, where 
+\begin_inset Formula $K=\{p,q\}$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma=V$
+\end_inset
+
+,
+\begin_inset Formula $F=\{q\}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ contains the following: (1) 
+\begin_inset Formula $((p,a,e),(p,a))$
+\end_inset
+
+ for each 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, (2) 
+\begin_inset Formula $((p,e,\alpha^{R}),(p,A))$
+\end_inset
+
+ for each rule 
+\begin_inset Formula $A\rightarrow\alpha$
+\end_inset
+
+ in 
+\begin_inset Formula $R$
+\end_inset
+
+, (3) 
+\begin_inset Formula $((p,e,S),(q,e))$
+\end_inset
+
+.
 \end_layout
 
 \end_body
