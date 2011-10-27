@@ -1714,6 +1714,20 @@ transition relation
 \end_inset
 
 .
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+vdash
 \end_layout
 
 \begin_layout Section
@@ -2012,7 +2026,7 @@ Bottom-up pushdown automata construction:
 \end_inset
 
  is the automata, where 
-\begin_inset Formula $K=\{p,q\}$
+\begin_inset Formula $\mbox{}K=\{p,q\}$
 \end_inset
 
 , 
@@ -2052,6 +2066,269 @@ Bottom-up pushdown automata construction:
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Chapter
+Turing Machines
+\end_layout
+
+\begin_layout Section
+The Definition of a Turing Machine
+\end_layout
+
+\begin_layout Standard
+Unlike finite automata or pushdown autoamta, turing machine can be regarded
+ as truly general models of computers.
+\end_layout
+
+\begin_layout Standard
+Turing machines seem to form a 
+\emph on
+stable
+\emph default
+ and 
+\emph on
+maximal
+\emph default
+ class of computational devices, in terms of the computations they can perform.
+\end_layout
+
+\begin_layout Standard
+A Turing machine is a quintuple 
+\begin_inset Formula $(K,\Sigma,\delta,s,H)$
+\end_inset
+
+, where 
+\begin_inset Formula $K$
+\end_inset
+
+ is a finite set of 
+\emph on
+states
+\emph default
+; 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ is an alphabet, containing the 
+\emph on
+blank symbol
+\emph default
+ 
+\begin_inset Formula $\sqcup$
+\end_inset
+
+ and the 
+\emph on
+left end symbol
+\emph default
+ 
+\begin_inset Formula $\vartriangleright$
+\end_inset
+
+, but not containing the symbols 
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ and 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+; 
+\begin_inset Formula $s\in K$
+\end_inset
+
+ is the 
+\emph on
+initial state
+\emph default
+, 
+\begin_inset Formula $H\subseteq K$
+\end_inset
+
+ is the set of 
+\emph on
+halting states
+\emph default
+; 
+\begin_inset Formula $\delta$
+\end_inset
+
+, the 
+\emph on
+transition function
+\emph default
+, is a function from 
+\begin_inset Formula $(K-H)\times\Sigma$
+\end_inset
+
+ to 
+\begin_inset Formula $K\times(\Sigma\cup\{\leftarrow,\rightarrow\})$
+\end_inset
+
+ such that (a) for all 
+\begin_inset Formula $q\in K-H$
+\end_inset
+
+, if 
+\begin_inset Formula $\delta(q,\vartriangleright)=(p,b)$
+\end_inset
+
+, then 
+\begin_inset Formula $b=\rightarrow$
+\end_inset
+
+, (b) for all 
+\begin_inset Formula $q\in K-H$
+\end_inset
+
+ and 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, if 
+\begin_inset Formula $\delta(q,a)=(p,b)$
+\end_inset
+
+ then 
+\begin_inset Formula $b\not=\vartriangleright$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+configuration
+\emph default
+ of a Turing machine 
+\begin_inset Formula $M=(K,\Sigma,\delta,s,H)$
+\end_inset
+
+ is a member of 
+\begin_inset Formula $K\times\vartriangleright\Sigma^{*}\times(\Sigma^{*}(\Sigma-\{\sqcup\})\cup\{e\}).$
+\end_inset
+
+ All configurations are assumed to start with the left end symbol and never
+ end with a blank, unless the blank is currently scanned.
+\end_layout
+
+\begin_layout Standard
+The definition of 
+\begin_inset Formula $(q_{1},w_{1}\underline{a_{1}}u_{1})\vdash_{M}(q_{2},w_{2}\underline{a_{2}}u_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{1}\vdash_{M}^{*}C_{2}$
+\end_inset
+
+ , configuration 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ 
+\emph on
+yields
+\emph default
+ configuration 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+ A 
+\emph on
+computation
+\emph default
+ by 
+\begin_inset Formula $M$
+\end_inset
+
+ is a sequence of configurations 
+\begin_inset Formula $C_{0},C_{1},\ldots,C_{n}$
+\end_inset
+
+, for some 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $C_{0}\vdash_{M}C_{1}\vdash_{M}C_{2}\vdash_{M}\cdots\vdash_{M}C_{n}$
+\end_inset
+
+.
+ This computation is of 
+\emph on
+length
+\emph default
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ or it has 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\emph on
+steps
+\emph default
+, and we write 
+\begin_inset Formula $C_{0}\vdash_{M}^{n}C_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Use a 
+\emph on
+hierarchical
+\emph default
+ notation, more and more complex machines are built from simpler materials.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+basic machines
+\emph default
+ include the 
+\emph on
+symbol-writing machines
+\emph default
+ and the 
+\emph on
+head-moving machines.
+
+\emph default
+ If 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, the 
+\emph on
+a-writing machine
+\emph default
+ will be denoted simply as 
+\emph on
+a
+\emph default
+.
+ The head-moving machines 
+\emph on
+L
+\emph default
+ and 
+\emph on
+R
+\emph default
+.
+ Turing machines will ge combined in a way suggestive of the structure of
+ a finite automaton.
 \end_layout
 
 \end_body
