@@ -2331,5 +2331,268 @@ R
  a finite automaton.
 \end_layout
 
+\begin_layout Section
+Computing with Turing Machines
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M=(K,\Sigma,\delta,s,H)$
+\end_inset
+
+ be a Turing machine, 
+\begin_inset Formula $H=\{y,n\}$
+\end_inset
+
+ consists of two halting states, denoting 
+\emph on
+accepting configuration
+\emph default
+ and 
+\emph on
+rejecting configuration
+\emph default
+.
+ We say that 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\emph on
+decides
+\emph default
+ a language 
+\begin_inset Formula $L$
+\end_inset
+
+ if for any string 
+\begin_inset Formula $w$
+\end_inset
+
+, 
+\begin_inset Formula $w\in L$
+\end_inset
+
+ then 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $w$
+\end_inset
+
+; and if 
+\begin_inset Formula $w\notin L$
+\end_inset
+
+ then 
+\begin_inset Formula $M$
+\end_inset
+
+ rejects 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ We call a language 
+\emph on
+recursive
+\emph default
+ if there is a Turing machine that decides it.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M=(K,\Sigma,\delta,s,H)$
+\end_inset
+
+ be a Turing machine.
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on input 
+\begin_inset Formula $w$
+\end_inset
+
+, and that 
+\begin_inset Formula $(s,\vartriangleright\underline{\sqcup}w)\vdash_{M}^{*}(s,\vartriangleright\underline{\sqcup}y)$
+\end_inset
+
+ for some 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $y$
+\end_inset
+
+ is called the 
+\emph on
+output of
+\emph default
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\emph on
+on input
+\emph default
+ 
+\begin_inset Formula $w$
+\end_inset
+
+, and is denoted 
+\begin_inset Formula $M(w)$
+\end_inset
+
+.
+ Notic that 
+\begin_inset Formula $M(w)$
+\end_inset
+
+ is defined 
+\emph on
+only if
+\emph default
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\emph on
+halts on input 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be any function from 
+\begin_inset Formula $\Sigma_{0}^{*}$
+\end_inset
+
+ to 
+\begin_inset Formula $\Sigma_{0}^{*}$
+\end_inset
+
+.
+ We say that 
+\begin_inset Formula $M$
+\end_inset
+
+
+\emph on
+ computes 
+\emph default
+function 
+\begin_inset Formula $f$
+\end_inset
+
+ if, for all 
+\begin_inset Formula $w\in\Sigma_{0}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $M(w)=f(w)$
+\end_inset
+
+.
+ A function is called 
+\emph on
+recursive
+\emph default
+, if there is a Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ that computes 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M=(K,\Sigma,\delta,s,H)$
+\end_inset
+
+ be a Turing machine, and let 
+\begin_inset Formula $L\subseteq\Sigma_{0}^{*}$
+\end_inset
+
+ be a language.
+ We say that 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\emph on
+semidecides
+\emph default
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ if for any string 
+\begin_inset Formula $w\in\Sigma_{0}^{*}$
+\end_inset
+
+ the following is true: 
+\begin_inset Formula $w\in L$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on input 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ A language 
+\begin_inset Formula $L$
+\end_inset
+
+ is 
+\emph on
+recursively enumerable
+\emph default
+ if and only if there is a Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ that semidecides 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If a language is recursive, then it is recursively enumerable.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $L$
+\end_inset
+
+ is a recursive language, then its complement 
+\begin_inset Formula $\overline{L}$
+\end_inset
+
+ is also recursive.
+\end_layout
+
 \end_body
 \end_document
