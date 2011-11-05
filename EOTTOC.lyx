@@ -2592,6 +2592,121 @@ If
 \end_inset
 
  is also recursive.
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extensions of the Turing Machine
+\end_layout
+
+\begin_layout Standard
+The additional features in Turing Machines do not add to the classes of
+ computable functions or decidable languages, since each instance can be
+ 
+\emph on
+simulated
+\emph default
+ by the staandard model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k$
+\end_inset
+
+-tape Turing machine are capable of quite complex computatioinal tasks.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M=(K,\Sigma,\delta,s,H)$
+\end_inset
+
+ be a 
+\begin_inset Formula $k$
+\end_inset
+
+-tape Turing machine for some 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+.
+ Then there is a standard Turing machine 
+\begin_inset Formula $M'=(K',\Sigma',\delta',s',H)$
+\end_inset
+
+, where 
+\begin_inset Formula $\Sigma\subseteq\Sigma'$
+\end_inset
+
+, and such that the following holds: For any input string 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ on input 
+\begin_inset Formula $x$
+\end_inset
+
+ halts with output 
+\begin_inset Formula $y$
+\end_inset
+
+ on the first tape if and only if 
+\begin_inset Formula $M'$
+\end_inset
+
+ on input 
+\begin_inset Formula $x$
+\end_inset
+
+ halts at the same halting state, and with the same output y on its tape.
+ Furthermore, if 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on input 
+\begin_inset Formula $x$
+\end_inset
+
+ after 
+\begin_inset Formula $t$
+\end_inset
+
+ steps, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ halts on input 
+\begin_inset Formula $x$
+\end_inset
+
+ after a number of steps which is 
+\begin_inset Formula $\mathcal{O}(t\cdot(|x|+t))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A two-way infinite tape can be easily simulated by a 2-tape machine.
+\end_layout
+
+\begin_layout Standard
+A Turing machine with one tape and several heads or with two-dimensional
+ tape can be simulated too.
+\end_layout
+
+\begin_layout Standard
+Any function that is computed or language that is decided or semidecided
+ by Turing machine with several tapes, heads, two-way infinite tapes, or
+ multi-dimensional tapes, is also computed, decided, or semidecided, respectivel
+y, by a standard Turing machine.
 \end_layout
 
 \end_body
