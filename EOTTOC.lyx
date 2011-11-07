@@ -2592,10 +2592,6 @@ If
 \end_inset
 
  is also recursive.
-\begin_inset Formula $ $
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -2707,6 +2703,80 @@ Any function that is computed or language that is decided or semidecided
  by Turing machine with several tapes, heads, two-way infinite tapes, or
  multi-dimensional tapes, is also computed, decided, or semidecided, respectivel
 y, by a standard Turing machine.
+\end_layout
+
+\begin_layout Section
+Random Access Turing Machines
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+random access Turing machine
+\emph default
+ has a fixed number of 
+\emph on
+registers
+\emph default
+ and a one-way infinite tape; each register and each tape square is capable
+ of containing an arbitrary natural number.
+ The program of a random access Turing machine is a sequence of 
+\emph on
+instructions
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+A random access Turing machine is a pair 
+\begin_inset Formula $M=(k,\Pi)$
+\end_inset
+
+, where 
+\begin_inset Formula $k>0$
+\end_inset
+
+ is the number of registers, and 
+\begin_inset Formula $\Pi=(\pi_{1},\pi_{2},\ldots,\pi_{p})$
+\end_inset
+
+, the program is a finite sequence of instructions.
+ A configuration of a random access machine 
+\begin_inset Formula $(k,\Pi)$
+\end_inset
+
+ is a 
+\begin_inset Formula $k+2$
+\end_inset
+
+-tuple 
+\begin_inset Formula $(\kappa,R_{0},R_{1},\ldots,R_{k-1},T)$
+\end_inset
+
+, where 
+\begin_inset Formula $\kappa\in\mathrm{N}$
+\end_inset
+
+ is the program counter, 
+\begin_inset Formula $R_{j}\in\mathrm{N}$
+\end_inset
+
+ is the current value of Register 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ is the tape contents.
+\end_layout
+
+\begin_layout Standard
+Any language decided or semidecided by a random access Turing machine, and
+ any function computable by a random access Turing machine, can be decided,
+ semidecided, and computed, respectively, by a standard Turing machine.
 \end_layout
 
 \end_body
