@@ -2779,5 +2779,58 @@ Any language decided or semidecided by a random access Turing machine, and
  semidecided, and computed, respectively, by a standard Turing machine.
 \end_layout
 
+\begin_layout Section
+Nondeterministic Turing Machines
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+nondeterministic Turing machine
+\emph default
+ is a quintuple 
+\begin_inset Formula $(K,\Sigma,\Delta,s,H)$
+\end_inset
+
+, where 
+\begin_inset Formula $K$
+\end_inset
+
+, 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, and 
+\begin_inset Formula $H$
+\end_inset
+
+ are as for standard Turing machines, and 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $((K-H)\times\Sigma)\times(K\times(\Sigma\cup\{\leftarrow,\rightarrow\}))$
+\end_inset
+
+, rather than a function.
+\end_layout
+
+\begin_layout Standard
+If a nondeterministic Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ semidecides or decides a language, or computes a function, then there is
+ a standard Turing machine 
+\begin_inset Formula $M'$
+\end_inset
+
+ semideciding or deciding the same language, or computing the same function.
+\end_layout
+
 \end_body
 \end_document
