@@ -3056,5 +3056,105 @@ The Church-Turing thesis: algorithm can be rendered as Turing machine that
  algorithms.
 \end_layout
 
+\begin_layout Section
+Universal Turing Machines
+\end_layout
+
+\begin_layout Standard
+We can define a language whose strings are all legal representations of
+ Turing machines.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+universal Turing machine
+\emph default
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ uses the encodings of other machines as programs to direct its operation.
+ It takes two aguments, a discription of the machine 
+\begin_inset Formula $M$
+\end_inset
+
+ and a description of an input string 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+The Halting Problem
+\end_layout
+
+\begin_layout Standard
+If there is a program can determine whether a program on given input halt
+ 
+\begin_inset Formula $halt(P,X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then consider a 
+\begin_inset Formula $diagonal(X)$
+\end_inset
+
+ it halts if and only if not 
+\begin_inset Formula $halt(X,X)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $diagonal(diagonal)$
+\end_inset
+
+ halts if and only if not 
+\begin_inset Formula $halt(diagonal,diagonal)$
+\end_inset
+
+.
+ Contradiction.
+\end_layout
+
+\begin_layout Standard
+Language 
+\begin_inset Formula 
+\[
+H=\{"M""w":\mathrm{\text{ Turing machine }}M\text{ halts on input string}w\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is not recursive, but is recursively enumerable (universal Turing machine
+ semidecides it).
+\end_layout
+
+\begin_layout Standard
+If and only if 
+\begin_inset Formula $H$
+\end_inset
+
+ is recursive, then every recursively enumerable language is recursive.
+ But since the halting problem is undecidable, it's not recursive.
+\end_layout
+
+\begin_layout Standard
+Therefore, the class of recursive languages is a strict subset of the class
+ of recursively enumerable languages.
+\end_layout
+
+\begin_layout Standard
+The class of recursively enumerable language is not closed under complement.
+\end_layout
+
 \end_body
 \end_document
