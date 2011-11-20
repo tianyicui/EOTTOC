@@ -2926,5 +2926,135 @@ recursive
 .
 \end_layout
 
+\begin_layout Section
+Numerical Functions
+\end_layout
+
+\begin_layout Standard
+Define 
+\emph on
+zero, id
+\emph default
+, 
+\emph on
+succ, 
+\emph default
+they're primative recursive functions
+\end_layout
+
+\begin_layout Standard
+plus(
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $0$
+\end_inset
+
+) = 
+\begin_inset Formula $m$
+\end_inset
+
+, plus(
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $n+1$
+\end_inset
+
+) = succ(plus(
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+)); mult(
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $0$
+\end_inset
+
+) = zero(
+\begin_inset Formula $m$
+\end_inset
+
+), mult(
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $n+1$
+\end_inset
+
+) = plus(
+\begin_inset Formula $m$
+\end_inset
+
+, mult(
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+)); exp, pred, substraction...
+\end_layout
+
+\begin_layout Standard
+Primitive recursive predicate: iszero.
+ Then greater-than, etc...
+\end_layout
+
+\begin_layout Standard
+Then we have function defined by cases: div, rem, 
+\end_layout
+
+\begin_layout Standard
+The set of primitive recursive functions is 
+\emph on
+enumerable
+\emph default
+.
+ We can use diagonalization argument to construct a function which is computable
+ but not primitive recursive.
+\end_layout
+
+\begin_layout Standard
+Call a function 
+\begin_inset Formula $\mu$
+\end_inset
+
+-recursive if it can be obtained from the basic functions by the operations
+ of composition, recursive definition, and 
+\emph on
+minimalization of minimalizable functions
+\emph default
+, which is in turn 
+\emph on
+recursive
+\emph default
+.
+\end_layout
+
+\begin_layout Chapter
+Undecidability
+\end_layout
+
+\begin_layout Section
+The Church-Turing Thesis
+\end_layout
+
+\begin_layout Standard
+The Church-Turing thesis: algorithm can be rendered as Turing machine that
+ is guaranteed to halt on all inputs, and all such maachines will be called
+ algorithms.
+\end_layout
+
 \end_body
 \end_document
