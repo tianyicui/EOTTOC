@@ -3156,5 +3156,87 @@ Therefore, the class of recursive languages is a strict subset of the class
 The class of recursively enumerable language is not closed under complement.
 \end_layout
 
+\begin_layout Section
+Undecidable Problems About Turing Machines
+\end_layout
+
+\begin_layout Standard
+There is no algorithm that decides, for an arbitrary given Turing machine
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ and input string 
+\begin_inset Formula $w$
+\end_inset
+
+, whether or not 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Problems for which no algorithms exist are called 
+\emph on
+undecidable
+\emph default
+ or 
+\emph on
+unsolvable
+\emph default
+, e.g.
+ the halting problem for Turing machines.
+\end_layout
+
+\begin_layout Standard
+A reduction from language 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ i a recursive function 
+\begin_inset Formula $r$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\in L_{1}$
+\end_inset
+
+if and only if 
+\begin_inset Formula $r(x)\in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To show a languag 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ is not recursive, we must identify a language 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ which is known to be not recursive, and then reduce 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ ot 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
