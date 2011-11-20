@@ -3238,5 +3238,51 @@ To show a languag
 .
 \end_layout
 
+\begin_layout Section
+Unsolvable Problems About Grammars
+\end_layout
+
+\begin_layout Standard
+Lots of problems related to grammars are undecidable.
+\end_layout
+
+\begin_layout Standard
+Surprisingly, lots of problems related to context-free grammar are also
+ undecidable: (a) given a context-free grammar 
+\begin_inset Formula $G$
+\end_inset
+
+, is 
+\begin_inset Formula $L(G)=\Sigma^{*}$
+\end_inset
+
+? (b) given two context-free grammar 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+, is 
+\begin_inset Formula $L(G_{1})=L(G_{2})$
+\end_inset
+
+? (c) given two pushdown automata 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+, do they accept precisely the same language? (d) given a pushdown automaton
+ 
+\begin_inset Formula $M$
+\end_inset
+
+, find an equivalent pushdown automaton with as few states as possible.
+\end_layout
+
 \end_body
 \end_document
