@@ -3284,5 +3284,59 @@ Surprisingly, lots of problems related to context-free grammar are also
 , find an equivalent pushdown automaton with as few states as possible.
 \end_layout
 
+\begin_layout Section
+An Unsolvable Tiling Problem
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+tiling system
+\emph default
+ is a quadruple 
+\begin_inset Formula $\mathcal{D}=(D,d_{0},H,V)$
+\end_inset
+
+, where 
+\begin_inset Formula $D$
+\end_inset
+
+ is a finite set of tiles, 
+\begin_inset Formula $d_{0}\in D$
+\end_inset
+
+, and 
+\begin_inset Formula $H$
+\end_inset
+
+, 
+\begin_inset Formula $V\subseteq D\times D$
+\end_inset
+
+.
+ A 
+\emph on
+tiling
+\emph default
+ by 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ is a function 
+\begin_inset Formula $f\,:\,\mathrm{N}\times\mathrm{N}\mapsto D$
+\end_inset
+
+ such that the following hold: 
+\begin_inset Formula $f(0,0)=d_{0},(f(m,n),f(m+1,n))\in H,(f(m,n),f(m,n+1))\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The problem of determining, given a tiling system, whether there is a tiling
+ by that system is undecidable.
+\end_layout
+
 \end_body
 \end_document
