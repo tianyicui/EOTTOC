@@ -3338,5 +3338,45 @@ The problem of determining, given a tiling system, whether there is a tiling
  by that system is undecidable.
 \end_layout
 
+\begin_layout Section
+Properties of Recursive Languages
+\end_layout
+
+\begin_layout Standard
+A language is recursive if and only if both it and its complement are recursivel
+y enumerable.
+\end_layout
+
+\begin_layout Standard
+A language is 
+\emph on
+Turing-enumerable
+\emph default
+ if and only if there is a Turing machine that enumerates it, if and only
+ if is recursively enumerable.
+\end_layout
+
+\begin_layout Standard
+A language is recursive if and only if it is lexicographically Turing-enumerable.
+\end_layout
+
+\begin_layout Standard
+Suppose that 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is a proper, nonempty subset of the class of all recursively enumerable
+ lanugages.
+ Then the following problem is undecidable: Given a Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+, is 
+\begin_inset Formula $L(M)\in\mathcal{C}$
+\end_inset
+
+?
+\end_layout
+
 \end_body
 \end_document
