@@ -3378,5 +3378,54 @@ Suppose that
 ?
 \end_layout
 
+\begin_layout Chapter
+Computational Complexity
+\end_layout
+
+\begin_layout Section
+The Class 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ is said to be 
+\emph on
+polynomially bounded
+\emph default
+ if there is a polynomial 
+\begin_inset Formula $p(n)$
+\end_inset
+
+ such that the machine always halts after at most 
+\begin_inset Formula $p(n)$
+\end_inset
+
+ steps, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the length of the input.
+ The corresponding language is called polymonially decidable.
+ The class of all polynomially decidable languages is denoted 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ is closed under complement.
+\end_layout
+
 \end_body
 \end_document
