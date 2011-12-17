@@ -3464,5 +3464,25 @@ Equvalence of Finite Automata: Equivalence of deterministic finite automata
 ).
 \end_layout
 
+\begin_layout Section
+Boolean Satisfiability
+\end_layout
+
+\begin_layout Standard
+Problem Satisfiability: Given a Boolean formula 
+\begin_inset Formula $F$
+\end_inset
+
+ in conjunctive normal form, is it satisfiable?
+\end_layout
+
+\begin_layout Standard
+2-Satisfiability is in 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
