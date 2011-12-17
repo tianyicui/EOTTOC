@@ -3484,5 +3484,101 @@ Problem Satisfiability: Given a Boolean formula
 .
 \end_layout
 
+\begin_layout Section
+The Class 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A nondeterministic Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ is said to be 
+\emph on
+polynomially bounded
+\emph default
+ if there is a polymonial 
+\begin_inset Formula $p(n)$
+\end_inset
+
+ ...
+ that is, no computtion of thsis machine continues for more than polynomially
+ many steps.
+ Define 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+ to be the class of all languages that are decided by a polynomially bounded
+ nondeterministic Turing machine.
+\end_layout
+
+\begin_layout Standard
+Satisfiability, traveling salesman problem, are in 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It is immediate that 
+\begin_inset Formula $\mathcal{P}\subseteq\mathcal{NP}$
+\end_inset
+
+ (the analog of the fact that every recursive language is recursively enumerable
+).
+\end_layout
+
+\begin_layout Standard
+Is 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ equal to 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+? We're not sure.
+\end_layout
+
+\begin_layout Standard
+A Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ is said to be 
+\emph on
+exonentially bounded
+\emph default
+ if ...
+ The class 
+\begin_inset Formula $\mathcal{\varepsilon XP}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{NP}\subseteq\mathcal{\varepsilon XP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Language be 
+\emph on
+polynomially balanced
+\emph default
+ and 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+ languages.
+ -- Succinct certificates.
+\end_layout
+
 \end_body
 \end_document
