@@ -3427,5 +3427,42 @@ polynomially bounded
  is closed under complement.
 \end_layout
 
+\begin_layout Section
+Problems, Problems...
+\end_layout
+
+\begin_layout Standard
+Reachability problem.
+ Euler cycle.
+ Hamilton Cycle.
+\end_layout
+
+\begin_layout Standard
+Optimization problems: Traveling salesman problem.
+ Independent set.
+ Clique.
+ Node covers (use vertex to cover all edges).
+\end_layout
+
+\begin_layout Standard
+Integer partitions: Partition (to two sets).
+ Unary partition.
+\end_layout
+
+\begin_layout Standard
+Equvalence of Finite Automata: Equivalence of deterministic finite automata
+ (In 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+).
+ Equivalence of nondeteministic finite automata; Equivalence of regular
+ expressions (not sure if in 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+).
+\end_layout
+
 \end_body
 \end_document
