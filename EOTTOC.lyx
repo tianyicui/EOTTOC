@@ -3580,5 +3580,163 @@ polynomially balanced
  -- Succinct certificates.
 \end_layout
 
+\begin_layout Chapter
+NP-Completeness
+\end_layout
+
+\begin_layout Section
+Polynomial-Time Reductions
+\end_layout
+
+\begin_layout Standard
+The definition of 
+\emph on
+polynomial-time computable, polynomial reduction
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L_{1},L_{2}\subseteq\Sigma^{*}$
+\end_inset
+
+ be languages.
+ A polynomial-time computable function 
+\begin_inset Formula $\tau:\Sigma^{*}\mapsto\Sigma^{*}$
+\end_inset
+
+ is called a 
+\emph on
+polynomial reduction from
+\emph default
+ 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ 
+\emph on
+to
+\emph default
+ 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ if for each 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ the following holds: 
+\begin_inset Formula $x\in L_{1}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\tau(x)\in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Reduction from Hamilton Cycle to Satisfiability.
+\end_layout
+
+\begin_layout Standard
+Six reductions: Partition, Knapsack, Two-Machine Scheduling.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\tau_{1}$
+\end_inset
+
+ is a polynomial reduction from 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\tau_{2}$
+\end_inset
+
+ is a polynomial reduction from 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+, then 
+\begin_inset Formula $r_{1}\circ r_{2}$
+\end_inset
+
+ is a polynomial reduction from 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A language
+\begin_inset Formula $L$
+\end_inset
+
+ is called 
+\emph on
+
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete
+\emph default
+ if (a) 
+\begin_inset Formula $L\in\mathcal{NP}$
+\end_inset
+
+; and (b) for every language 
+\begin_inset Formula $L'\in\mathcal{NP}$
+\end_inset
+
+, there is a polynomial reduction from 
+\begin_inset Formula $L'$
+\end_inset
+
+ to 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L$
+\end_inset
+
+ be an 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete language.
+ Then 
+\begin_inset Formula $\mathcal{P}=\mathcal{NP}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $L\in\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
