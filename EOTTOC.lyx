@@ -3738,5 +3738,87 @@ Let
 .
 \end_layout
 
+\begin_layout Section
+Cook's Theorem
+\end_layout
+
+\begin_layout Standard
+Bounded Tiling problem: Given a tiling system 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, an integer 
+\begin_inset Formula $s$
+\end_inset
+
+, and a function 
+\begin_inset Formula $f_{0}:\{0,\ldots,s-1\}\mapsto D$
+\end_inset
+
+, represented by its sequence of values 
+\begin_inset Formula $(f_{0}(0),\ldots,f_{0}(s-1))$
+\end_inset
+
+, is there an 
+\begin_inset Formula $s\times s$
+\end_inset
+
+ tiling by 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ extending 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Bounded TIling is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete.
+\end_layout
+
+\begin_layout Standard
+Its certificate is polynomial, hence in 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+.
+ Then encoding nondeterministic Turing machine into tiling system.
+\end_layout
+
+\begin_layout Standard
+Cook's Theorem: Satisfiability is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete.
+ We can reduce Bounded Tiling to Satisfiability.
+\end_layout
+
+\begin_layout Standard
+3-Satisfiability is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete.
+\end_layout
+
+\begin_layout Standard
+Max Sat is a 
+\emph on
+generalization
+\emph default
+ of Satisfiability, hence 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete.
+\end_layout
+
 \end_body
 \end_document
