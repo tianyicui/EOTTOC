@@ -3931,5 +3931,56 @@ Corollary: Unless
  finite automaton in time that is polynomial in the input and the output.
 \end_layout
 
+\begin_layout Section
+Coping with 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-Completeness
+\end_layout
+
+\begin_layout Standard
+We can solve some special cases of 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-completeness problems, such as 2-Satisfiability or when the graph is a
+ tree.
+\end_layout
+
+\begin_layout Standard
+Approximation algorithms can produce solutions 
+\emph on
+guaranteed to be close to the optimum
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Fully approximable problems, in that there is an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-approximation algorithm.
+ Partly approximable problems, for some range of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+'s, but the range does not reach down to zero.
+ Inapproximable problems, no 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-approximation algorithm.
+\end_layout
+
+\begin_layout Standard
+Backtracking and Branch-and-Bound.
+\end_layout
+
+\begin_layout Standard
+Local improvement.
+\end_layout
+
 \end_body
 \end_document
