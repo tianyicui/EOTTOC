@@ -3820,5 +3820,116 @@ generalization
 -complete.
 \end_layout
 
+\begin_layout Section
+More 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-Complete Problems
+\end_layout
+
+\begin_layout Standard
+We can reduce our known 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete problems to other problems, and those to still others.
+\end_layout
+
+\begin_layout Standard
+Exact Cover is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Satisfiability.
+\end_layout
+
+\begin_layout Standard
+Hamilton Cycle is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Exact Cover.
+\end_layout
+
+\begin_layout Standard
+Undireced Hamilton Cycle is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Hamilton Cycle.
+\end_layout
+
+\begin_layout Standard
+The Traveling Salesman Problem is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Undirected Hamilton Cycle.
+\end_layout
+
+\begin_layout Standard
+Knapsack is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Exact Cover.
+\end_layout
+
+\begin_layout Standard
+Partition and Two-Machine Scheduling are 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Knapsack.
+\end_layout
+
+\begin_layout Standard
+Independent Set is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from 3-Satisfiability.
+\end_layout
+
+\begin_layout Standard
+Clique and Node Cover are 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Independent Set.
+\end_layout
+
+\begin_layout Standard
+Inequivlence of Regular Expressions.
+ Since the certificate doesn't have the 
+\emph on
+polynomial succinctness
+\emph default
+ property, it's not in 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Inequivalence of *-Free Regular Expresions is 
+\begin_inset Formula $\mathcal{NP}$
+\end_inset
+
+-complete, reduced from Satisfiability.
+\end_layout
+
+\begin_layout Standard
+Corollary: Unless 
+\begin_inset Formula $\mathcal{P}=\mathcal{NP}$
+\end_inset
+
+, there is no algorithm which, given a regular expression or a nondeterministic
+ finite automaton, constructs the minimum-state equivalent deterministic
+ finite automaton in time that is polynomial in the input and the output.
+\end_layout
+
 \end_body
 \end_document
