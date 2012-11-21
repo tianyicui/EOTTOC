@@ -378,7 +378,7 @@ Closures and algorithms
 \begin_layout Standard
 The 
 \emph on
-reflecxie transitive closure
+reflexive transitive closure
 \emph default
  of a directed graph.
 \end_layout
@@ -737,7 +737,7 @@ DFA is computer with no memory; input a string, output indicate whether
 \end_layout
 
 \begin_layout Standard
-DFA definition: quituple 
+DFA definition: quintuple 
 \begin_inset Formula $M=(K,\Sigma,\delta,s,F)$
 \end_inset
 
@@ -810,11 +810,7 @@ configuration of a DFA
 \begin_inset Formula $(q,w)\vdash_{M}(q',w')$
 \end_inset
 
- if and only
-\begin_inset Formula $\vdash_{M}^{*}$
-\end_inset
-
- if 
+ if and only if 
 \begin_inset Formula $w=aw'$
 \end_inset
 
@@ -848,7 +844,7 @@ in one step
 \begin_inset Formula $\vdash_{M}$
 \end_inset
 
-by 
+ by 
 \begin_inset Formula $\vdash_{M}^{*}$
 \end_inset
 
@@ -935,7 +931,7 @@ notational generalization
 \end_layout
 
 \begin_layout Standard
-NFA definition: quituple 
+NFA definition: quintuple 
 \begin_inset Formula $M=(K,\Sigma,\Delta,s,F)$
 \end_inset
 
@@ -1036,7 +1032,11 @@ s on languages.
 \end_layout
 
 \begin_layout Standard
-Theorem: Let 
+Theorem (one of 
+\emph on
+pumping theorems
+\emph default
+): Let 
 \begin_inset Formula $L$
 \end_inset
 
@@ -1212,7 +1212,7 @@ Corollary: A language L is regular if and only if
 \end_layout
 
 \begin_layout Standard
-Algorithm for state minimization: continuely refine the relation 
+Algorithm for state minimization: continually refine the relation 
 \begin_inset Formula $\equiv=\approx/\sim$
 \end_inset
 
@@ -1228,8 +1228,8 @@ Algorithms for Finite Automata
 \end_layout
 
 \begin_layout Standard
-Expnential: NFA to DFA, NFA to regex, decides whether two regex or NFA are
- equivalent.
+Exponential: NFA to DFA, NFA to regex, decides whether two regex or NFA
+ are equivalent.
 \end_layout
 
 \begin_layout Standard
@@ -1873,7 +1873,7 @@ Pumping theorem: Let
 \begin_inset Formula $w=uvxyz$
 \end_inset
 
- in such a way that eigher 
+ in such a way that either 
 \begin_inset Formula $v$
 \end_inset
 
@@ -1937,8 +1937,8 @@ Determinism and Parsing
 
 \begin_layout Standard
 Deterministic pushdown automaton: for each configuration there is at most
- one configuration taht can succeed it.
- Detrministic CFG are thost that are accepted by deterministic pushdown
+ one configuration that can succeed it.
+ Deterministic CFG are those that are accepted by deterministic pushdown
  automata.
 \end_layout
 
@@ -1973,7 +1973,7 @@ The class of deterministic context-free language is
 closed under complement
 \emph default
 .
- The class of deterministic comtext-free language is 
+ The class of deterministic context-free language is 
 \emph on
 properly contained
 \emph default
@@ -1982,7 +1982,7 @@ properly contained
 
 \begin_layout Standard
 Top-Down Parsing: the steps in the computation where a nonterminal is replaced
- on top of the stack correpsond to the constrction of a parse tree from
+ on top of the stack correspond to the construction of a parse tree from
  the root towards the leaves.
 \end_layout
 
